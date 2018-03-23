@@ -62,7 +62,7 @@
   "provisioners": [
     {
     "type": "file",
-    "source": "./id_rsa_github_deploy_key",
+    "source": "./github_rsa",
     "destination": "/home/vagrant/"
     },
     {
