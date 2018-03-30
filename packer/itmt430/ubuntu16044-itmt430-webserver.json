@@ -62,7 +62,7 @@
   "provisioners": [
     {
     "type": "file",
-    "source": "./github_rsa",
+    "source": "./id_rsa_github_deploy_key",
     "destination": "/home/vagrant/"
     },
     {
@@ -80,7 +80,7 @@
         "cp -v /home/vagrant/id_rsa_github_deploy_key /home/vagrant/.ssh/",
         "cp -v /home/vagrant/config /home/vagrant/.ssh/",
         "cp -v /home/vagrant/config /root/.ssh/",
-        "git clone git@github.com:illinoistech-itm/hajek.git"
+        "git clone git@github.com:illinoistech-itm/2018-itm430-9.git"
       ]
     },
     {
@@ -88,13 +88,13 @@
   "execute_command" : "echo 'vagrant' | {{ .Vars }} sudo -E -S sh '{{ .Path }}'", 
     "script": "../scripts/post_install_itmt430-github-ws.sh",
     "environment_vars": [ 
-      "DBPASS={{user `database-root-password`}}",
-      "USERPASS={{user `database-user-password`}}",
-      "ACCESSFROMIP={{user `database-access-from-ip`}}",
-      "DATABASEIP={{user `database-ip`}}",
-      "WEBSERVERIP={{user `webserver-ip`}}",
-      "DATABASENAME={{user `database-name`}}",
-      "DATABASEUSERNAME={{user `database-user-name`}}"
+      "DBPASS={{user `foo`}}",
+      "USERPASS={{user `bar`}}",
+      "ACCESSFROMIP={{user `127.0.0.1`}}",
+      "DATABASEIP={{user `127.0.0.1`}}",
+      "WEBSERVERIP={{user `127.0.0.1`}}",
+      "DATABASENAME={{user `namegoeshere`}}",
+      "DATABASEUSERNAME={{`database-username-goes-here`}}"
     ]
   }
 ],
