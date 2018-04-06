@@ -90,9 +90,12 @@
     "environment_vars": [ 
       "DBPASS={{user `foo`}}",
       "USERPASS={{user `bar`}}",
-      "ACCESSFROMIP={{user `127.0.0.1`}}",
-      "DATABASEIP={{user `127.0.0.1`}}",
-      "WEBSERVERIP={{user `127.0.0.1`}}",
+      "ACCESSFROMIP={{user `192.168.1.241
+`}}",
+      "DATABASEIP={{user `192.168.1.241
+`}}",
+      "WEBSERVERIP={{user `192.168.1.241
+`}}",
       "DATABASENAME={{user `namegoeshere`}}",
       "DATABASEUSERNAME={{`database-username-goes-here`}}"
     ]
